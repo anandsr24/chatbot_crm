@@ -1,0 +1,4 @@
+tools:
+  - type: mcp
+    name: crm_tools
+    endpoint: http://localhost:3333
