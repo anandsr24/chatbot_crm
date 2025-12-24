@@ -1,0 +1,17 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+
+# ADK artifacts
+.adk/
+crm_app/.adk/
+
+# Environment variables
+.env
+
+# Logs
+*.log
