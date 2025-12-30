@@ -15,3 +15,6 @@ crm_app/.adk/
 
 # Logs
 *.log
+
+__adk_agent_builder_assistant/.adk/
+└─ session.db
