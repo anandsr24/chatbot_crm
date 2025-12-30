@@ -130,11 +130,11 @@ def salesforce_columns(input_text: str) -> str:
         parts = _parse_input_to_dict(input_text)
 
         # ---- Validate required fields ----
-        if not all(k in parts for k in ("username", "password", "securitytoken")):
+        if not all(k in parts for k in ("username", "password", "securitytoken","table")):
             return (
                 "Invalid input format.\n"
                 "Expected:\n"
-                "username=<value> password=<value> securityToken=<value>"
+                "username=<value> password=<value> securityToken=<value> table=<Account>"
             )
 
         # ---- Build payload ----
@@ -142,6 +142,7 @@ def salesforce_columns(input_text: str) -> str:
         "username": parts["username"],
         "password": parts["password"],
         "securityToken": parts["securitytoken"],  
+        "table": parts["table"], 
         "connectorId": 5,
         "connectorName": "salesforce",
         "pyMethod": "columnsMethodName"
